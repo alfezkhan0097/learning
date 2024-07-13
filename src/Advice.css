@@ -1,0 +1,102 @@
+:root{
+    --Light-Cyan: hsl(193, 38%, 86%);
+    --Neon-Green: hsl(150, 100%, 66%);
+    --Grayish-Blue: hsl(217, 19%, 38%);
+    --Dark-Grayish-Blue: hsl(217, 19%, 24%);
+    --Dark-Blue: hsl(218, 23%, 16%);
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    font-size: 28px;
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    background-color: var(--Dark-Blue);
+    color: var(--Light-Cyan);
+}
+.con{
+    background-color: var(--Dark-Grayish-Blue);
+    width:516px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    padding: 46px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+    transition: all 1s ease-in-out;
+}
+.text-con{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.text-con h6{
+    color: var(--Neon-Green);
+    letter-spacing: 4px;
+    font-size: .46em;
+    margin: 8px;
+}
+.text-con h3{
+    font-size: 1em;
+    margin: 10px 0px 24px 0px;
+    text-align: center;
+}
+.btm-con{
+    position: relative;
+    width: 100%;
+    height: 46px;
+}
+.btm-con #divide{
+    width: 100%;
+}
+.btm-con button{
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    aspect-ratio: 1/1;
+    background-color: var(--Neon-Green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: -76px;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    transition: all .16s ease-in-out;
+}
+.btm-con button:hover{
+    box-shadow: 0px 0px 32px var(--Neon-Green);
+}
+.btm-con button:active{
+    transform: scale(1.1) translateX(-28px) rotateZ(180deg);
+}
+
+@media screen and (max-width:768px){
+    body{
+        height: 100svh;
+    }
+    .con{
+        width: 90vw;
+    }
+    .btm-con button:hover{
+        box-shadow: none;
+    }
+    .btm-con button:active{
+    box-shadow: 0px 0px 32px var(--Neon-Green);
+    transform: scale(1.1) translateX(-28px) rotateZ(180deg);
+    }
+}
